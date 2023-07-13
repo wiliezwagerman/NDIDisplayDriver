@@ -35,8 +35,16 @@
     <ClCompile Include="Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Program Files\NDI\NDI 5 SDK\Examples\C++\NDIlib_Send_Video_and_Audio\NDIlib_Send_Video_and_Audio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="..\..\..\..\..\..\Program Files\NDI\NDI 5 SDK\Bin\x64\Processing.NDI.Lib.x64.dll">
+      <Filter>Source Files</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>
