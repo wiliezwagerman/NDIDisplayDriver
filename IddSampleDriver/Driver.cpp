@@ -26,6 +26,7 @@ Environment:
 #include <algorithm>
 #include <atomic>
 #include <Processing.NDI.Lib.h>
+#include <string>
 
 #ifdef _WIN32
 #ifdef _WIN64
@@ -788,7 +789,7 @@ static void sigint_handler(int)
     exit_loop = true;
 }
 
-static void InitNdi(int argc, char* argv[])
+static void InitNdi(char StreamName)
 {	// Not required, but "correct" (see the SDK documentation.
     if (!NDIlib_initialize())
     {	// Cannot run NDI. Most likely because the CPU is not sufficient (see SDK documentation).
@@ -802,7 +803,7 @@ static void InitNdi(int argc, char* argv[])
 
     // Create an NDI source that is called "My Video and Audio" and is clocked to the video.
     NDIlib_send_create_t NDI_send_create_desc;
-    NDI_send_create_desc.p_ndi_name = "NDI Display";
+    NDI_send_create_desc.p_ndi_name = "StreamName";
 
     // We create the NDI sender
     NDIlib_send_instance_t pNDI_send = NDIlib_send_create(&NDI_send_create_desc);
