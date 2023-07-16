@@ -102,5 +102,7 @@ namespace Microsoft
             static const DISPLAYCONFIG_VIDEO_SIGNAL_INFO s_KnownMonitorModes[];
             static const BYTE s_KnownMonitorEdid[];
         };
+
+        
     }
 }
