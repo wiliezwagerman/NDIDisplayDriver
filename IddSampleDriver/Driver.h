@@ -16,6 +16,7 @@
 #include <vector>
 
 #include "Trace.h"
+#include "NDISend.h"
 
 namespace Microsoft
 {
@@ -70,6 +71,7 @@ namespace Microsoft
             HANDLE m_hAvailableBufferEvent;
             Microsoft::WRL::Wrappers::Thread m_hThread;
             Microsoft::WRL::Wrappers::Event m_hTerminateEvent;
+            NDISend m_NDISender;
         };
 
         /// <summary>

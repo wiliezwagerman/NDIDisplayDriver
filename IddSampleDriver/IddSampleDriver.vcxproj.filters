@@ -30,12 +30,15 @@
     <ClInclude Include="Trace.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="NDISend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\Program Files\NDI\NDI 5 SDK\Examples\C++\NDIlib_Send_Video_and_Audio\NDIlib_Send_Video_and_Audio.cpp">
+    <ClCompile Include="NDISend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

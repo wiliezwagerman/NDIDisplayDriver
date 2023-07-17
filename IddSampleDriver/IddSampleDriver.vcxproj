@@ -35,11 +35,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Program Files\NDI\NDI 5 SDK\Examples\C++\NDIlib_Send_Video_and_Audio\NDIlib_Send_Video_and_Audio.cpp" />
     <ClCompile Include="Driver.cpp" />
+    <ClCompile Include="NDISend.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Driver.h" />
+    <ClInclude Include="NDISend.h" />
     <ClInclude Include="Trace.h" />
   </ItemGroup>
   <ItemGroup>
