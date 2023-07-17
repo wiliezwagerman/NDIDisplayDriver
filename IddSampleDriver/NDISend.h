@@ -28,10 +28,10 @@ class NDISend
 public:
 	NDISend();
 	void Init(char* StreamName);
-	void QueFrame(IDXGIResource buffer);
+	void QueFrame(IDXGIResource* buffer);
 	void SendVideo();
 
 private:
-	std::queue<IDXGIResource> FrameQueue;
+	std::queue<IDXGIResource*> FrameQueue;
 };
 
