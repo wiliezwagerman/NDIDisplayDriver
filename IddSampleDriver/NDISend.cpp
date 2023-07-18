@@ -109,10 +109,9 @@ void NDISend::Init(char* StreamName)
 
 
 
-void NDISend::QueFrame(IDXGIResource* buffer)
+void NDISend::QueFrame(ID3D11Texture2D* buffer)
 {
-    IDXGIResource* BufferPtr = buffer;
-    NDISend::FrameQueue.push(buffer);
+    FrameBuffer = buffer;
 }
 
 void NDISend::SendVideo() {

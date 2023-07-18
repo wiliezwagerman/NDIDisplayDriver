@@ -317,8 +317,15 @@ void SwapChainProcessor::RunCore()
             // TODO: Process the frame here
             // 
             //
+
+            ID3D11Texture2D* pTexture = nullptr;
+            D3D11_MAPPED_SUBRESOURCE* MappedResource;
+            hr = Buffer.MetaData.pSurface->QueryInterface(IID_PPV_ARGS(&pTexture));
             
-            m_NDISender.QueFrame(Buffer.MetaData.pSurface);
+            ID3D11Texture2D* BufferCopy = nullptr;
+            m_Device->DeviceContext->CopyResource(BufferCopy, pTexture);
+
+            m_NDISender.QueFrame(BufferCopy);
             // ==============================
 
             AcquiredBuffer.Reset();
